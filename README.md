@@ -1,2 +1,0 @@
-# menu
-Chondros Kavos menu
