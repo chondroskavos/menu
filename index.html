@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Language</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        #language-menu {
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: #fff;
+            padding: 10px;
+            z-index: 1000;
+        }
+        .flag {
+            width: 30px;
+            height: auto;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .btn {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px 20px;
+            font-size: 20px;
+            text-decoration: none;
+            border: 1px solid #000;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+<div id="language-menu">
+    <img class="flag" src="https://drive.google.com/file/d/1m3tH4yn04-ZPKOqfDe_6p6dXED85WPvS/view?usp=drivesdk" alt="Greek Flag" onclick="changeLanguage('greek')">
+    <img class="flag" src="https://drive.google.com/file/d/1RV5lQid9IwM_ulmuYTByvLSPzd8esW1t/view?usp=drivesdk" alt="English Flag" onclick="changeLanguage('english')">
+    <img class="flag" src="https://drive.google.com/file/d/1b6NIivt8uFonFJGnPO-wGjIVSdnlcLyZ/view?usp=drivesdk
+" alt="Italian Flag" onclick="changeLanguage('italian')">
+</div>
+
+<div class="container">
+    <h1>Select Language</h1>
+    <div id="greek-menu">
+        <a class="btn" href="https://drive.google.com/file/d/1X-mLK7kXr5SP5IHeHaNwtMrciFFgGGjZ/view?usp=drivesdk">Ελληνικά</a>
+    </div>
+    <div id="english-menu" style="display: none;">
+        <a class="btn" href="https://drive.google.com/file/d/1PG-4cGEt8CmhdEPkpX17jKkGhItw4nEO/view?usp=drivesdk">English</a>
+    </div>
+    <div id="italian-menu" style="display: none;">
+        <a class="btn" href="https://drive.google.com/file/d/1pR1eRGpjGSM-neeBQ59D16AErpAyVsWp/view?usp=drivesdk">Italiano</a>
+    </div>
+</div>
+
+<script>
+    function changeLanguage(language) {
+        if (language === 'greek') {
+            document.getElementById('greek-menu').style.display = 'block';
+            document.getElementById('english-menu').style.display = 'none';
+            document.getElementById('italian-menu').style.display = 'none';
+        } else if (language === 'english') {
+            document.getElementById('greek-menu').style.display = 'none';
+            document.getElementById('english-menu').style.display = 'block';
+            document.getElementById('italian-menu').style.display = 'none';
+        } else if (language === 'italian') {
+            document.getElementById('greek-menu').style.display = 'none';
+            document.getElementById('english-menu').style.display = 'none';
+            document.getElementById('italian-menu').style.display = 'block';
+        }
+    }
+</script>
+
+</body>
+</html>
